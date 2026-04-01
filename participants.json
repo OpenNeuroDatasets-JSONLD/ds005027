@@ -1,11 +1,25 @@
 {
   "participant_id": {
     "LongName": "BIDS ID",
-    "Description": "Subject ID"
+    "Description": "Subject ID",
+    "Annotations": {
+      "IsAbout": {
+        "TermURL": "nb:ParticipantID",
+        "Label": "Participant ID"
+      },
+      "VariableType": "Identifier"
+    }
   },
   "session": {
     "LongName": "imaging session",
-    "Description": "wave at which data is collected"
+    "Description": "wave at which data is collected",
+    "Annotations": {
+      "IsAbout": {
+        "TermURL": "nb:SessionID",
+        "Label": "Session ID"
+      },
+      "VariableType": "Identifier"
+    }
   },
   "ScanAge": {
     "LongName": "ScanAge",
@@ -18,6 +32,24 @@
     "Levels": {
       "2": "male",
       "1": "female"
+    },
+    "Annotations": {
+      "IsAbout": {
+        "TermURL": "nb:Sex",
+        "Label": "Sex"
+      },
+      "VariableType": "Categorical",
+      "Levels": {
+        "1": {
+          "TermURL": "snomed:248152002",
+          "Label": "Female"
+        },
+        "2": {
+          "TermURL": "snomed:248153007",
+          "Label": "Male"
+        }
+      },
+      "MissingValues": []
     }
   },
   "Race": {
@@ -44,6 +76,6 @@
   },
   "reward_days_ses2toses3": {
     "LongName": "Days between session 2 and session 3",
-    "Description": "days between scans, calculated based on e-prime dates" 
+    "Description": "days between scans, calculated based on e-prime dates"
   }
 }
